@@ -2,21 +2,12 @@
 <html>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <head>
-    <style>
-        input[type=text] {
-            width: 300px;
-            font-size: 16px;
-            border: 2px solid #ccc;
-            border-radius: 4px;
-            padding: 12px 10px 12px 10px;
-        }
-    </style>
 </head>
 <body>
-<h2>Nhap So</h2>
+<h2>Input Number</h2>
 <form method="post">
-    <input type="text" name="search" placeholder="Nhập so"/>
-    <input type = "submit" id = "submit" value = "Tìm"/>
+    <input type="text" name="search" placeholder="Number"/>
+    <input type = "submit" id = "submit" value = "Convert"/>
 </form>
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
