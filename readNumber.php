@@ -12,9 +12,9 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $num = $_POST["search"];
-    $Tr=(int)($num/100);
-    $Ch=(int)(($num-100*$Tr)/10);
-    $Dv=$num-100*$Tr-10*$Ch;
+    $threeNumber=(int)($num/100);
+    $twoNumber=(int)(($num-100*$threeNumber)/10);
+    $oneNumber=$num-100*$threeNumber-10*$twoNumber;
     $flag = 0;
     $numbers = array(
         "1"=>"one",
@@ -48,28 +48,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }else if($num>20&&$num<100){
         foreach ($arrNum as $N=>$x){
-            if($N==$Ch){
+            if($N==$twoNumber){
                 echo "Num: " . $num . ". <br/>Read: " . $x ." " ;
             }
         }
         foreach ($numbers as $N=>$x){
-            if($N==$Dv){
+            if($N==$oneNumber){
                 echo $x ;
             }
         }
     }else if($num>100&&$num<1000){
         foreach ($numbers as $N=>$x){
-            if($N==$Tr){
+            if($N==$threeNumber){
                 echo "Num: " . $num . ". <br/>Read: " .$x." hundred and " ;
             }
         }
         foreach ($arrNum as $N=>$x){
-            if($N==$Ch){
+            if($N==$twoNumber){
                 echo $x ." " ;
             }
         }
         foreach ($numbers as $N=>$x){
-            if($N==$Dv){
+            if($N==$oneNumber){
                 echo $x ;
             }
         }
